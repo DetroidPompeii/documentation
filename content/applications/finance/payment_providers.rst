@@ -14,6 +14,7 @@ Payment providers (credit cards, online payments)
    payment_providers/asiapay
    payment_providers/authorize
    payment_providers/buckaroo
+   payment_providers/demo
    payment_providers/flutterwave
    payment_providers/mercado_pago
    payment_providers/mollie
@@ -150,6 +151,13 @@ Online payment providers
    added and configured on your Accounting app to do a bank reconciliation, which is an accounting
    control process.
 
+.. tip::
+   In addition to the regular payment providers that integrate with an API such as Stripe, PayPal,
+   or Adyen, Odoo bundles the :doc:`module <../../../applications/general/apps_modules>`
+   **payment_demo** and the :doc:`demo payment provider <payment_providers/demo>`. This payment
+   provider allows demo payments to test business flows involving online payments. No credentials
+   are required as the demo payments are fake.
+
 .. _payment_providers/bank_payments:
 
 Bank payments
@@ -251,7 +259,7 @@ Express checkout
 
 If your payment provider supports this feature, customers can use the **Google Pay** and **Apple
 Pay** buttons to pay their eCommerce orders in one click without filling the contact form. Using one
-of those buttons, they'll go straight from the cart to the confirmation page, stopping by the
+of those buttons, customers go straight from the cart to the confirmation page, stopping by the
 payment form of Google or Apple to validate the payment.
 
 Enable this feature by navigating to the :guilabel:`Configuration` tab from your payment provider
@@ -259,6 +267,22 @@ and by ticking the :guilabel:`Allow Express Checkout` checkbox.
 
 .. note::
    All prices shown in the express checkout payment form are always taxes included.
+
+.. _payment_providers/fees:
+
+Fees
+----
+
+If supported by the payment provider, you can add **extra fees** to online transactions. Fees can be
+configured either as **fixed** amounts or **percentages**, and can be applied according to
+**domestic** or **international** geolocation.
+
+To enable fees, from the *eCommerce* or *Accounting* app, head to :menuselection:`Configuration
+--> Payment Providers` and select the desired supported provider. Click on the :guilabel:`Fees` tab
+and check the :guilabel:`Add Extra Fees` box. Configure the settings to your needs.
+
+.. note::
+   Fees are calculated on the tax-included price.
 
 .. _payment_providers/configuration:
 
@@ -387,6 +411,7 @@ payment method... What best suit your needs.
    - :doc:`payment_providers/authorize`
    - :doc:`payment_providers/asiapay`
    - :doc:`payment_providers/buckaroo`
+   - :doc:`payment_providers/demo`
    - :doc:`payment_providers/mercado_pago`
    - :doc:`payment_providers/mollie`
    - :doc:`payment_providers/ogone`
