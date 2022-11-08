@@ -192,9 +192,17 @@ to authenticate, the simplest call is to ask for the server's version.
 
 .. tabs::
 
-   .. group-tab:: Python
+   .. group-tab:: Python XML-RPC
 
-      .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.py
+      .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_xmlrpc2.py
+         :language: python
+         :dedent: 8
+         :start-after: <docanchor logging_in common>
+         :end-before: </docanchor logging_in common>
+
+   .. group-tab:: Python JSON-RPC
+
+      .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_jsonrpc2.py
          :language: python
          :dedent: 8
          :start-after: <docanchor logging_in common>
@@ -230,9 +238,17 @@ result should be the same as above.
 
 .. tabs::
 
-   .. group-tab:: Python
+   .. group-tab:: Python XML-RPC
 
-      .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.py
+      .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_xmlrpc2.py
+         :language: python
+         :dedent: 8
+         :start-after: <docanchor logging_in models>
+         :end-before: </docanchor logging_in models>
+
+   .. group-tab:: Python JSON-RPC
+
+      .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_jsonrpc2.py
          :language: python
          :dedent: 8
          :start-after: <docanchor logging_in models>
@@ -303,9 +319,17 @@ Depending on the API, it may also be possible to create or keep a proxy to a mod
 
 .. tabs::
 
-   .. group-tab:: Python
+   .. group-tab:: Python XML-RPC
 
-      .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.py
+      .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_xmlrpc2.py
+         :language: python
+         :dedent: 8
+         :start-after: <docanchor check_access_rights>
+         :end-before: </docanchor check_access_rights>
+
+   .. group-tab:: Python JSON-RPC
+
+      .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_jsonrpc2.py
          :language: python
          :dedent: 8
          :start-after: <docanchor check_access_rights>
@@ -337,9 +361,13 @@ Depending on the API, it may also be possible to create or keep a proxy to a mod
 
 Result:
 
-.. code-block:: json
+.. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_jsonrpc2.py
+   :language: json
+   :dedent: 16
+   :start-after: <docanchor check_access_rights json>
+   :end-before: </docanchor check_access_rights json>
+   :lines: 2-
 
-   true
 
 List records
 ------------
