@@ -232,6 +232,13 @@ to authenticate, the simplest call is to ask for the server's version.
          :start-after: <docanchor logging_in common>
          :end-before: </docanchor logging_in common>
 
+   .. group-tab:: cURL
+
+      .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.sh
+         :langage: bash
+         :start-after: <docanchor logging_in common>
+         :end-before: </docanchor logging_in common>
+
 Once the connection is established, you can connect again this time
 providing a database and a user/password authentication pair. The
 result should be the same as above.
@@ -275,6 +282,13 @@ result should be the same as above.
       .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.java
          :language: java
          :dedent: 8
+         :start-after: <docanchor logging_in models>
+         :end-before: </docanchor logging_in models>
+
+   .. group-tab:: cURL
+
+      .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.sh
+         :langage: bash
          :start-after: <docanchor logging_in models>
          :end-before: </docanchor logging_in models>
 
@@ -359,14 +373,18 @@ Depending on the API, it may also be possible to create or keep a proxy to a mod
          :start-after: <docanchor check_access_rights>
          :end-before: </docanchor check_access_rights>
 
+   .. group-tab:: cURL
+
+      .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.sh
+         :language: bash
+         :start-after: <docanchor check_access_rights>
+         :end-before: </docanchor check_access_rights>
+
 Result:
 
-.. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_jsonrpc2.py
-   :language: json
-   :dedent: 16
-   :start-after: <docanchor check_access_rights json>
-   :end-before: </docanchor check_access_rights json>
-   :lines: 2-
+.. code-block:: json
+
+   true
 
 
 List records
@@ -384,55 +402,50 @@ database identifiers of all records matching the filter.
 
    .. tabs::
 
-      .. code-tab:: python
+      .. group-tab:: Python XML-RPC
 
-            partners = models.res.partner
-            partners.search(
-                [],
-                [                                  # function arguments
-                    [                              # 1st argument, domain
-                        ['is_company', '=', True]  # domain leaf
-                    ]
-                ]
-            )
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_xmlrpc2.py
+            :language: python
+            :dedent: 8
+            :start-after: <docanchor list_records>
+            :end-before: </docanchor list_records>
 
-      .. code-tab:: ruby
+      .. group-tab:: Python XML-RPC
 
-            partners = models.proxy('res.partner')
-            partners.search(
-                [],
-                [                                  # function arguments
-                    [                              # 1st argument, domain
-                        ['is_company', '=', true]  # domain leaf
-                    ]
-                ],
-                {}  # empty function keyword arguments
-            )
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_jsonrpc2.py
+            :language: python
+            :dedent: 16
+            :start-after: <docanchor list_records>
+            :end-before: </docanchor list_records>
 
-      .. code-tab:: php
+      .. group-tab:: Ruby
 
-            $partners = $models->res->partner;
-            $partners->search(
-                [],
-                [                                  // function arguments
-                    [                              // 1st argument, domain
-                        ['is_company', '=', true]  // domain leaf
-                    ]
-                ],
-                []  # empty function keyword arguments
-            )
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.rb
+            :language: ruby
+            :start-after: <docanchor list_records>
+            :end-before: </docanchor list_records>
 
-      .. code-tab:: java
+      .. group-tab:: PHP
 
-            models.execute('res.parter.search', asList(
-                0,
-                asList(                                  // function arguments
-                    asList(                              // 1st argument, domain
-                        asList("is_company", "=", true)  // domain leaf
-                    )
-                ),
-                new HashMap();   # empty function keyword arguments
-            ));
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.rb
+            :language: ruby
+            :start-after: <docanchor list_records>
+            :end-before: </docanchor list_records>
+
+      .. group-tab:: Java
+
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.java
+            :language: java
+            :start-after: <docanchor list_records>
+            :end-before: </docanchor list_records>
+
+      .. group-tab:: cURL
+
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.sh
+            :language: bash
+            :start-after: <docanchor list_records>
+            :end-before: </docanchor list_records>
+
 
    Result:
 
@@ -451,56 +464,49 @@ available to only retrieve a subset of all matched records.
 
    .. tabs::
 
-      .. code-tab:: python
+      .. group-tab:: Python XML-RPC
 
-            partners = models.res.partner
-            partners.search(
-                [],
-                [[['is_company', '=', True]]],
-                {
-                    'offset': 10,
-                    'limit': 5
-                }
-            )
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_xmlrpc2.py
+            :language: python
+            :dedent: 8
+            :start-after: <docanchor pagination>
+            :end-before: </docanchor pagination>
 
-      .. code-tab:: ruby
+      .. group-tab:: Python XML-RPC
 
-            partners = models.proxy('res.partner')
-            partners.search(
-                [],
-                [[['is_company', '=', true]]],
-                {
-                    offset: 10,
-                    limit: 5
-                }
-            )
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_jsonrpc2.py
+            :language: python
+            :dedent: 16
+            :start-after: <docanchor pagination>
+            :end-before: </docanchor pagination>
 
-      .. code-tab:: php
+      .. group-tab:: Ruby
 
-            $partners = $models->res->partner;
-            $partners->search(
-                [],
-                [[['is_company', '=', true]]],
-                {
-                    'offset' => 10,
-                    'limit' => 5
-                }
-            )
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.rb
+            :language: ruby
+            :start-after: <docanchor pagination>
+            :end-before: </docanchor pagination>
 
-      .. code-tab:: java
+      .. group-tab:: PHP
 
-            asList((Object[])models.execute("res.parter.search", asList(
-                0,
-                asList(
-                    asList(
-                        asList("is_company", "=", true)
-                    )
-                ),
-                new HashMap() {{
-                    put("offset", 10);
-                    put("limit", 5);
-                }}
-            )));
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.rb
+            :language: ruby
+            :start-after: <docanchor pagination>
+            :end-before: </docanchor pagination>
+
+      .. group-tab:: Java
+
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.java
+            :language: java
+            :start-after: <docanchor pagination>
+            :end-before: </docanchor pagination>
+
+      .. group-tab:: cURL
+
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.sh
+            :language: bash
+            :start-after: <docanchor pagination>
+            :end-before: </docanchor pagination>
 
    Result:
 
