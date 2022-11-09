@@ -46,28 +46,32 @@ If you already have an Odoo server installed, you can just use its parameters.
 
    .. code-tab:: python
 
-      url = <insert server URL>  # 'mycompany.odoo.com'
+      scheme = 'https'
+      domain = <insert server URL>  # 'mycompany.odoo.com'
       database = <insert database name>  # 'mycompany'
       username = 'admin'
       password = <insert password for your admin user (default: admin)>
 
    .. code-tab:: ruby
 
-      url = <insert server URL>  # "mycompany.odoo.com"
+      scheme = 'https'
+      domain = <insert server URL>  # "mycompany.odoo.com"
       database = <insert database name>  # "mycompany"
       username = "admin"
       password = <insert password for your admin user (default: admin)>
 
    .. code-tab:: php
 
-      $url = <insert server URL>;  // "mycompany.odoo.com"
+      $scheme = 'https'
+      $domain = <insert server URL>;  // "mycompany.odoo.com"
       $database = <insert database name>;  // "mycompany"
       $username = "admin";
       $password = <insert password for your admin user (default: admin)>;
 
    .. code-tab:: java
 
-      final String url = <insert server URL>,  // "mycompany.odoo.com"
+      final String scheme = "https"
+            domain = <insert server URL>,  // "mycompany.odoo.com"
             database = <insert database name>,  // "mycompany"
             username = "admin",
             password = <insert password for your admin user (default: admin)>;
@@ -197,47 +201,45 @@ to authenticate, the simplest call is to ask for the server's version.
       .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_xmlrpc2.py
          :language: python
          :dedent: 8
-         :start-after: <docanchor logging_in common>
-         :end-before: </docanchor logging_in common>
+         :start-after: <a id=common>
+         :end-before: </a>
 
    .. group-tab:: Python JSON-RPC
 
       .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_jsonrpc2.py
          :language: python
          :dedent: 8
-         :start-after: <docanchor logging_in common>
-         :end-before: </docanchor logging_in common>
+         :start-after: <a id=common>
+         :end-before: </a>
 
    .. group-tab:: Ruby
 
       .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.rb
-         :langage: ruby
-         :dedent: 0
-         :start-after: <docanchor logging_in common>
-         :end-before: </docanchor logging_in common>
+         :language: ruby
+         :start-after: <a id=common>
+         :end-before: </a>
 
    .. group-tab:: PHP
 
       .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.php
-         :langage: php
-         :dedent: 0
-         :start-after: <docanchor logging_in common>
-         :end-before: </docanchor logging_in common>
+         :language: php
+         :start-after: <a id=common>
+         :end-before: </a>
 
    .. group-tab:: Java
 
       .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.java
-         :langage: java
+         :language: java
          :dedent: 8
-         :start-after: <docanchor logging_in common>
-         :end-before: </docanchor logging_in common>
+         :start-after: <a id=common>
+         :end-before: </a>
 
    .. group-tab:: cURL
 
       .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.sh
-         :langage: bash
-         :start-after: <docanchor logging_in common>
-         :end-before: </docanchor logging_in common>
+         :language: bash
+         :start-after: <a id=common>
+         :end-before: </a>
 
 Once the connection is established, you can connect again this time
 providing a database and a user/password authentication pair. The
@@ -250,47 +252,45 @@ result should be the same as above.
       .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_xmlrpc2.py
          :language: python
          :dedent: 8
-         :start-after: <docanchor logging_in models>
-         :end-before: </docanchor logging_in models>
+         :start-after: <a id=models>
+         :end-before: </a>
 
    .. group-tab:: Python JSON-RPC
 
       .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_jsonrpc2.py
          :language: python
          :dedent: 8
-         :start-after: <docanchor logging_in models>
-         :end-before: </docanchor logging_in models>
+         :start-after: <a id=models>
+         :end-before: </a>
 
    .. group-tab:: Ruby
 
       .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.rb
          :language: ruby
-         :dedent: 0
-         :start-after: <docanchor logging_in models>
-         :end-before: </docanchor logging_in models>
+         :start-after: <a id=models>
+         :end-before: </a>
 
    .. group-tab:: PHP
 
       .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.php
          :language: php
-         :dedent: 0
-         :start-after: <docanchor logging_in models>
-         :end-before: </docanchor logging_in models>
+         :start-after: <a id=models>
+         :end-before: </a>
 
    .. group-tab:: Java
 
       .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.java
          :language: java
          :dedent: 8
-         :start-after: <docanchor logging_in models>
-         :end-before: </docanchor logging_in models>
+         :start-after: <a id=models>
+         :end-before: </a>
 
    .. group-tab:: cURL
 
       .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.sh
-         :langage: bash
-         :start-after: <docanchor logging_in models>
-         :end-before: </docanchor logging_in models>
+         :language: bash
+         :start-after: <a id=models>
+         :end-before: </a>
 
 Result:
 
@@ -338,47 +338,45 @@ Depending on the API, it may also be possible to create or keep a proxy to a mod
       .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_xmlrpc2.py
          :language: python
          :dedent: 8
-         :start-after: <docanchor check_access_rights>
-         :end-before: </docanchor check_access_rights>
+         :start-after: <a id=check_access_rights>
+         :end-before: </a>
 
    .. group-tab:: Python JSON-RPC
 
       .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_jsonrpc2.py
          :language: python
          :dedent: 8
-         :start-after: <docanchor check_access_rights>
-         :end-before: </docanchor check_access_rights>
+         :start-after: <a id=check_access_rights>
+         :end-before: </a>
 
    .. group-tab:: Ruby
 
       .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.rb
          :language: ruby
-         :dedent: 0
-         :start-after: <docanchor check_access_rights>
-         :end-before: </docanchor check_access_rights>
+         :start-after: <a id=check_access_rights>
+         :end-before: </a>
 
    .. group-tab:: PHP
 
       .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.php
          :language: php
-         :dedent: 0
-         :start-after: <docanchor check_access_rights>
-         :end-before: </docanchor check_access_rights>
+         :start-after: <a id=check_access_rights>
+         :end-before: </a>
 
    .. group-tab:: Java
 
       .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.java
          :language: java
          :dedent: 8
-         :start-after: <docanchor check_access_rights>
-         :end-before: </docanchor check_access_rights>
+         :start-after: <a id=check_access_rights>
+         :end-before: </a>
 
    .. group-tab:: cURL
 
       .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.sh
          :language: bash
-         :start-after: <docanchor check_access_rights>
-         :end-before: </docanchor check_access_rights>
+         :start-after: <a id=check_access_rights>
+         :end-before: </a>
 
 Result:
 
@@ -386,6 +384,8 @@ Result:
 
    true
 
+
+.. _external_api/search
 
 List records
 ------------
@@ -407,44 +407,45 @@ database identifiers of all records matching the filter.
          .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_xmlrpc2.py
             :language: python
             :dedent: 8
-            :start-after: <docanchor list_records>
-            :end-before: </docanchor list_records>
+            :start-after: <a id=list>
+            :end-before: </a>
 
       .. group-tab:: Python XML-RPC
 
          .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_jsonrpc2.py
             :language: python
-            :dedent: 16
-            :start-after: <docanchor list_records>
-            :end-before: </docanchor list_records>
+            :dedent: 8
+            :start-after: <a id=list>
+            :end-before: </a>
 
       .. group-tab:: Ruby
 
          .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.rb
             :language: ruby
-            :start-after: <docanchor list_records>
-            :end-before: </docanchor list_records>
+            :start-after: <a id=list>
+            :end-before: </a>
 
       .. group-tab:: PHP
 
          .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.rb
             :language: ruby
-            :start-after: <docanchor list_records>
-            :end-before: </docanchor list_records>
+            :start-after: <a id=list>
+            :end-before: </a>
 
       .. group-tab:: Java
 
          .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.java
             :language: java
-            :start-after: <docanchor list_records>
-            :end-before: </docanchor list_records>
+            :dedent: 8
+            :start-after: <a id=list>
+            :end-before: </a>
 
       .. group-tab:: cURL
 
          .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.sh
             :language: bash
-            :start-after: <docanchor list_records>
-            :end-before: </docanchor list_records>
+            :start-after: <a id=list>
+            :end-before: </a>
 
 
    Result:
@@ -469,44 +470,45 @@ available to only retrieve a subset of all matched records.
          .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_xmlrpc2.py
             :language: python
             :dedent: 8
-            :start-after: <docanchor pagination>
-            :end-before: </docanchor pagination>
+            :start-after: <a id=pagination>
+            :end-before: </a>
 
       .. group-tab:: Python XML-RPC
 
          .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_jsonrpc2.py
             :language: python
-            :dedent: 16
-            :start-after: <docanchor pagination>
-            :end-before: </docanchor pagination>
+            :dedent: 8
+            :start-after: <a id=pagination>
+            :end-before: </a>
 
       .. group-tab:: Ruby
 
          .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.rb
             :language: ruby
-            :start-after: <docanchor pagination>
-            :end-before: </docanchor pagination>
+            :start-after: <a id=pagination>
+            :end-before: </a>
 
       .. group-tab:: PHP
 
          .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.rb
             :language: ruby
-            :start-after: <docanchor pagination>
-            :end-before: </docanchor pagination>
+            :start-after: <a id=pagination>
+            :end-before: </a>
 
       .. group-tab:: Java
 
          .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.java
             :language: java
-            :start-after: <docanchor pagination>
-            :end-before: </docanchor pagination>
+            :dedent: 8
+            :start-after: <a id=pagination>
+            :end-before: </a>
 
       .. group-tab:: cURL
 
          .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.sh
             :language: bash
-            :start-after: <docanchor pagination>
-            :end-before: </docanchor pagination>
+            :start-after: <a id=pagination>
+            :end-before: </a>
 
    Result:
 
@@ -527,36 +529,50 @@ only the number of records matching the query. It takes the same
 
    .. tabs::
 
-      .. code-tab:: python
+      .. group-tab:: Python XML-RPC
 
-            partners = models.res.partner
-            partners.search_count(
-                [],
-                [[['is_company', '=', True]]]
-            )
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_xmlrpc2.py
+            :language: python
+            :dedent: 8
+            :start-after: <a id=count>
+            :end-before: </a>
 
-      .. code-tab:: ruby
+      .. group-tab:: Python XML-RPC
 
-            partners = models.proxy('res.partner')
-            partners.search_count(
-                [],
-                [[['is_company', '=', true]]]
-            )
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_jsonrpc2.py
+            :language: python
+            :dedent: 8
+            :start-after: <a id=count>
+            :end-before: </a>
 
-      .. code-tab:: php
+      .. group-tab:: Ruby
 
-            $partners = $models->res->partner;
-            $partners->search_count(
-                [],
-                [[['is_company', '=', true]]]
-            )
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.rb
+            :language: ruby
+            :start-after: <a id=count>
+            :end-before: </a>
 
-      .. code-tab:: java
+      .. group-tab:: PHP
 
-            (Integer)models.execute("res.parter.search_count", asList(
-                0,
-                asList(asList(asList("is_company", "=", true)))
-            ));
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.rb
+            :language: ruby
+            :start-after: <a id=count>
+            :end-before: </a>
+
+      .. group-tab:: Java
+
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.java
+            :language: java
+            :dedent: 8
+            :start-after: <a id=count>
+            :end-before: </a>
+
+      .. group-tab:: cURL
+
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.sh
+            :language: bash
+            :start-after: <a id=count>
+            :end-before: </a>
 
    Result:
 
@@ -572,102 +588,101 @@ only the number of records matching the query. It takes the same
 Read records
 ------------
 
-Record data are accessible via the :meth:`~odoo.models.Model.read` method,
-which takes a list of ids (as returned by
-:meth:`~odoo.models.Model.search`), and optionally a list of fields to
-fetch. By default, it fetches all the fields the current user can read,
-which tends to be a huge amount.
+Record data are accessible via the :meth:`~odoo.models.Model.search_read` and :meth:`~odoo.models.Model.read` methods. ``search_read`` takes a domain whereas ``read`` takes a list of record ids (as returned by :meth:`~odoo.models.Model.search`), and optionally a list of fields to fetch. It fetches all the fields the current user can read by default. You can call the method with a non-empty ``fields`` argument to only fetch some fields.
 
 .. example::
 
-   .. tabs::
-
-      .. code-tab:: python
-
-            partners = models.res.partner
-            ids = partners.search(
-                [],
-                [[['is_company', '=', True]]],
-                {'limit': 1}
-            )
-            [record] = partners.read(ids)
-            # count the number of fields fetched by default
-            len(record)
-
-      .. code-tab:: ruby
-
-            partners = models.proxy('res.partner')
-            ids = partners.search(
-                [],
-                [[['is_company', '=', true]]],
-                {limit: 1}
-            )
-            record = partners.read(ids).first
-            record.length
-
-      .. code-tab:: php
-
-            $partners = $models->res->partner;
-            $ids = $partners->search(
-                [],
-                [[['is_company', '=', true]]],
-                ['limit' => 1]
-            );
-            $record = $partners->read($ids)[0];
-            count($record);
-
-      .. code-tab:: java
-
-            final List ids = asList((Object[])models.execute(
-                "res.partner.search", asList(
-                    0,
-                    asList(asList(asList("is_company", "=", true))),
-                    new HashMap() {{ put("limit", 1); }}
-                )
-            ))
-            final Map record = (Map)((Object[])models.execute(
-                "res.partner.read", asList(ids)
-            )[0];
-            // count the number of fields fetched by default
-            record.size();
-
-   Result:
-
-   .. code-block:: json
-
-      121
-
-   Conversely, picking only three fields deemed interesting.
+   This first exemple shows you how to use :meth:`~odoo.models.Model.search_read`.
 
    .. tabs::
 
-      .. code-tab:: python
+      .. group-tab:: Python XML-RPC
 
-            partners.read(ids, [], {
-                'fields': ['name', 'country_id', 'comment']
-            })
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_xmlrpc2.py
+            :language: python
+            :dedent: 8
+            :start-after: <a id=search_read>
+            :end-before: </a>
 
-      .. code-tab:: ruby
+      .. group-tab:: Python XML-RPC
 
-            partners.read(ids, [], {
-                'fields': ['name', 'country_id', 'comment']
-            })
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_jsonrpc2.py
+            :language: python
+            :dedent: 8
+            :start-after: <a id=search_read>
+            :end-before: </a>
 
-      .. code-tab:: php
+      .. group-tab:: Ruby
 
-            partners.read(ids, [], [
-                'fields' => ['name', 'country_id', 'comment']
-            ])
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.rb
+            :language: ruby
+            :start-after: <a id=search_read>
+            :end-before: </a>
 
-      .. code-tab:: java
+      .. group-tab:: PHP
 
-            asList((Object[])models.execute("res.partner.read", asList(
-                asList(ids),
-                emptyList(),
-                new HashMap() {{
-                    put("fields", asList("name", "country_id", "comment"));
-                }}
-            )));
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.rb
+            :language: ruby
+            :start-after: <a id=search_read>
+            :end-before: </a>
+
+      .. group-tab:: Java
+
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.java
+            :language: java
+            :dedent: 8
+            :start-after: <a id=search_read>
+            :end-before: </a>
+
+      .. group-tab:: cURL
+
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.sh
+            :language: bash
+            :start-after: <a id=search_read>
+            :end-before: </a>
+
+   This second example shows how to use :meth:`~odoo.models.Model.read` using
+   the first record we fetched in the :ref:`external_api/search` section.
+
+   .. tabs::
+
+      .. group-tab:: Python XML-RPC
+
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_xmlrpc2.py
+            :language: python
+            :dedent: 8
+            :start-after: <a id=read>
+            :end-before: </a>
+
+      .. group-tab:: Python XML-RPC
+
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_jsonrpc2.py
+            :language: python
+            :dedent: 8
+            :start-after: <a id=read>
+            :end-before: </a>
+
+      .. group-tab:: Ruby
+
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.rb
+            :language: ruby
+            :start-after: <a id=read>
+            :end-before: </a>
+
+      .. group-tab:: PHP
+
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.rb
+            :language: ruby
+            :start-after: <a id=read>
+            :end-before: </a>
+
+      .. group-tab:: Java
+
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.java
+            :language: java
+            :dedent: 8
+            :start-after: <a id=read>
+            :end-before: </a>
 
    Result:
 
@@ -694,44 +709,50 @@ updating a record).
 
    .. tabs::
 
-       .. code-tab:: python
+      .. group-tab:: Python XML-RPC
 
-            partners = models.res.partner
-            partners.fields_get(
-                [],
-                [],
-                {'attributes': ['string', 'help', 'type']}
-            )
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_xmlrpc2.py
+            :language: python
+            :dedent: 8
+            :start-after: <a id=fields_get>
+            :end-before: </a>
 
-       .. code-tab:: ruby
+      .. group-tab:: Python XML-RPC
 
-            partners = models.proxy('res.partner')
-            partners.fields_get(
-                [],
-                [],
-                {'attributes': ['string', 'help', 'type']}
-            )
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_jsonrpc2.py
+            :language: python
+            :dedent: 8
+            :start-after: <a id=fields_get>
+            :end-before: </a>
 
-       .. code-tab:: php
+      .. group-tab:: Ruby
 
-            $partners = $models->res->partner;
-            $partners->fields_get(
-                [],
-                [],
-                ['attributes' => ['string', 'help', 'type']]
-            )
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.rb
+            :language: ruby
+            :start-after: <a id=fields_get>
+            :end-before: </a>
 
-       .. code-tab:: java
+      .. group-tab:: PHP
 
-            (Map<String, Map<String, Object>>)models.execute(
-                "res.partner.fields_get", asList(
-                    0,
-                    emptyList(),
-                    new HashMap() {{
-                        put("attributes", asList("string", "help", "type"));
-                    }}
-                )
-            );
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.rb
+            :language: ruby
+            :start-after: <a id=fields_get>
+            :end-before: </a>
+
+      .. group-tab:: Java
+
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.java
+            :language: java
+            :dedent: 8
+            :start-after: <a id=fields_get>
+            :end-before: </a>
+
+      .. group-tab:: cURL
+
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.sh
+            :language: bash
+            :start-after: <a id=fields_get>
+            :end-before: </a>
 
    Result:
 
@@ -773,100 +794,9 @@ updating a record).
               "help": "",
               "string": "# of Purchase Order"
           },
+      }
 
-Search and read
----------------
-
-Because it is a very common task, Odoo provides a
-:meth:`~odoo.models.Model.search_read` shortcut which, as its name suggests, is
-equivalent to a :meth:`~odoo.models.Model.search` followed by a
-:meth:`~odoo.models.Model.read`, but avoids having to perform two requests
-and keep ids around.
-
-Its arguments are similar to :meth:`~odoo.models.Model.search`'s, but it
-can also take a list of ``fields`` (like :meth:`~odoo.models.Model.read`,
-if that list is not provided it will fetch all fields of matched records).
-
-.. example::
-
-   .. tabs::
-
-      .. code-tab:: python
-
-            partners = models.res.partner
-            partners.search_read(
-                [],
-                [[['is_company', '=', True]]],
-                {'fields': ['name', 'country_id', 'comment'], 'limit': 5}
-            )
-
-      .. code-tab:: ruby
-
-            partners = models.proxy('res.partner')
-            partners.search_read(
-                [],
-                [[['is_company', '=', true]]],
-                {fields: %w[name country_id comment], limit: 5}
-            )
-
-      .. code-tab:: php
-
-            $partners = $models->res->partner;
-            $partners->search_read(
-                [],
-                [[['is_company', '=', true]]],
-                ['fields'=>['name', 'country_id', 'comment'], 'limit'=>5]
-            )
-
-      .. code-tab:: java
-
-            asList((Object[])models.execute(
-                "res.partner.search_read", asList(
-                    0,
-                    asList(asList(asList("is_company", "=", true))),
-                    new HashMap() {{
-                        put("fields", asList("name", "country_id", "comment"));
-                        put("limit", 5);
-                    }}
-                )
-            ));
-
-   Result:
-
-   .. code-block:: json
-
-      [
-          {
-              "comment": false,
-              "country_id": [ 21, "Belgium" ],
-              "id": 7,
-              "name": "Agrolait"
-          },
-          {
-              "comment": false,
-              "country_id": [ 76, "France" ],
-              "id": 18,
-              "name": "Axelor"
-          },
-          {
-              "comment": false,
-              "country_id": [ 233, "United Kingdom" ],
-              "id": 12,
-              "name": "Bank Wealthy and sons"
-          },
-          {
-              "comment": false,
-              "country_id": [ 105, "India" ],
-              "id": 14,
-              "name": "Best Designers"
-          },
-          {
-              "comment": false,
-              "country_id": [ 76, "France" ],
-              "id": 17,
-              "name": "Camptocamp"
-          }
-      ]
+.. _external_api/create
 
 Create records
 --------------
@@ -882,38 +812,50 @@ set through the mapping argument, the default value will be used.
 
    .. tabs::
 
-      .. code-tab:: python
+      .. group-tab:: Python XML-RPC
 
-            partners = models.res.partner
-            [id] = partners.create(
-                [],
-                [{'name': 'New Partner'}]
-            )
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_xmlrpc2.py
+            :language: python
+            :dedent: 12
+            :start-after: <a id=create>
+            :end-before: </a>
 
-      .. code-tab:: ruby
+      .. group-tab:: Python XML-RPC
 
-            partners = models.proxy('res.partner')
-            id = partners.create(
-                [],
-                [{name: 'New Partner'}]
-            ).first
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_jsonrpc2.py
+            :language: python
+            :dedent: 12
+            :start-after: <a id=create>
+            :end-before: </a>
 
-      .. code-tab:: php
+      .. group-tab:: Ruby
 
-            $partners = $models->res->partner;
-            $id = $partners->create(
-                [],
-                [['name' => 'New Partner']]
-            )[0];
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.rb
+            :language: ruby
+            :start-after: <a id=create>
+            :end-before: </a>
 
-      .. code-tab:: java
+      .. group-tab:: PHP
 
-            final Integer id = (Integer)models.execute(
-                "res.partner.create", asList(
-                    0,
-                    asList(new HashMap() {{
-                        put("name", "New Partner");
-                    }})
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.rb
+            :language: ruby
+            :start-after: <a id=create>
+            :end-before: </a>
+
+      .. group-tab:: Java
+
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.java
+            :language: java
+            :dedent: 8
+            :start-after: <a id=create>
+            :end-before: </a>
+
+      .. group-tab:: cURL
+
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.sh
+            :language: bash
+            :start-after: <a id=create>
+            :end-before: </a>
 
    Result:
 
@@ -946,53 +888,55 @@ a record).
 
 .. example::
 
+   Because we need records on which to write, we are going to use the record
+   we created in the :ref:`external_api/create` section.
+
    .. tabs::
 
-      .. code-tab:: python
+      .. group-tab:: Python XML-RPC
 
-            partners = models.res.partner
-            partners.write(
-                [id],  # i.e. the ID from the create() rpc
-                [{'name': "Newer partner"}],
-                {}
-            )
-            # get record name after having changed it
-            partners.name_get([id])
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_xmlrpc2.py
+            :language: python
+            :dedent: 8
+            :start-after: <a id=write>
+            :end-before: </a>
 
-      .. code-tab:: ruby
+      .. group-tab:: Python XML-RPC
 
-            partners = models.proxy('res.partner')
-            partners.write(
-                [id],
-                [{name: "Newer partner"}],
-                {}
-            )
-            # get record name after having changed it
-            partners.name_get([id])
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_jsonrpc2.py
+            :language: python
+            :dedent: 8
+            :start-after: <a id=write>
+            :end-before: </a>
 
-      .. code-tab:: php
+      .. group-tab:: Ruby
 
-            $partners = $models->res->partner;
-            $partners->write(
-                [$id],
-                [['name' => 'Newer partner']],
-                []
-            )
-            // get record name after having changed it
-            $partners->name_get([$id])
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.rb
+            :language: ruby
+            :start-after: <a id=write>
+            :end-before: </a>
 
-      .. code-tab:: java
+      .. group-tab:: PHP
 
-            models.execute("res.partner.write", asList(
-                asList(id),
-                asList(new HashMap() {{
-                    put("name", "Newer Partner");
-                }})
-            ));
-            // get record name after having changed it
-            models.execute("res.partner.name_get", asList(
-                asList(id)
-            ))
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.rb
+            :language: ruby
+            :start-after: <a id=write>
+            :end-before: </a>
+
+      .. group-tab:: Java
+
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.java
+            :language: java
+            :dedent: 8
+            :start-after: <a id=write>
+            :end-before: </a>
+
+      .. group-tab:: cURL
+
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.sh
+            :language: bash
+            :start-after: <a id=write>
+            :end-before: </a>
 
    Result:
 
@@ -1008,48 +952,55 @@ Records can be deleted in bulk by providing their ids to
 
 .. example::
 
+   Because we need records on which to write, we are going to use the record
+   we created in the :ref:`external_api/create` section.
+
    .. tabs::
 
-      .. code-tab:: python
+      .. group-tab:: Python XML-RPC
 
-            partners = models.res.partner
-            partners.unlink([id])
-            # check if the deleted record is still in the database
-            partners.search(
-                [],
-                [[['id', '=', id]]],
-            )
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_xmlrpc2.py
+            :language: python
+            :dedent: 8
+            :start-after: <a id=unlink>
+            :end-before: </a>
 
-      .. code-tab:: ruby
+      .. group-tab:: Python XML-RPC
 
-            partners = models.proxy('res.partner')
-            partners.unlink([id])
-            # check if the deleted record is still in the database
-            partners.search(
-                [],
-                [[['id', '=', id]]],
-            )
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_jsonrpc2.py
+            :language: python
+            :dedent: 8
+            :start-after: <a id=unlink>
+            :end-before: </a>
 
-      .. code-tab:: php
+      .. group-tab:: Ruby
 
-            $partners = $models->res->partner;
-            $partners->unlink([id])
-            // check if the deleted record is still in the database
-            $partners->search(
-                [id],
-                [[['id', '=', $id]]]
-            )
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.rb
+            :language: ruby
+            :start-after: <a id=unlink>
+            :end-before: </a>
 
-      .. code-tab:: java
+      .. group-tab:: PHP
 
-            models.execute("res.partner.unlink", asList(
-                asList(id)
-            ))
-            // check if the deleted record is still in the database
-            asList((Object[])models.execute("res.partner.search", asList(
-                0,
-                asList(asList(asList("id", "=", id)))
-            )));
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.rb
+            :language: ruby
+            :start-after: <a id=unlink>
+            :end-before: </a>
+
+      .. group-tab:: Java
+
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.java
+            :language: java
+            :dedent: 8
+            :start-after: <a id=unlink>
+            :end-before: </a>
+
+      .. group-tab:: cURL
+
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.sh
+            :language: bash
+            :start-after: <a id=unlink>
+            :end-before: </a>
 
    Result:
 
@@ -1064,8 +1015,9 @@ While we previously used :meth:`~odoo.models.Model.fields_get` to query a
 model and have been using an arbitrary model from the start, Odoo stores
 most model metadata inside a few meta-models which allow both querying the
 system and altering models and fields (with some limitations) on the fly over
-XML-RPC.
+RPC.
 
+.. _external_api/ir.model
 .. _reference/webservice/inspection/models:
 
 ``ir.model``
@@ -1111,88 +1063,50 @@ Provides information about Odoo models via its various fields.
 
    .. tabs::
 
-      .. code-tab:: python
+      .. group-tab:: Python XML-RPC
 
-            ir_models = models.ir.model
-            [x_custom_model_id] = ir_models.create(
-                [],
-                [{
-                    'name': "Custom Model",
-                    'model': 'x_custom_model',
-                    'state': 'manual'
-                }]
-            )
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_xmlrpc2.py
+            :language: python
+            :dedent: 8
+            :start-after: <a id=ir.model>
+            :end-before: </a>
 
-            x_custom_models = models.x_custom_model
-            x_custom_models.fields_get(
-                [],
-                [],
-                {'attributes': ['string', 'help', 'type']}
-            )
+      .. group-tab:: Python XML-RPC
 
-      .. code-tab:: php
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_jsonrpc2.py
+            :language: python
+            :dedent: 8
+            :start-after: <a id=ir.model>
+            :end-before: </a>
 
-            $ir_models = $models->ir->model
-            $x_custom_model_id = $ir_models->create(
-                []
-                [[
-                    'name' => "Custom Model",
-                    'model' => 'x_custom_model',
-                    'state' => 'manual'
-                ]]
-            )[0];
+      .. group-tab:: Ruby
 
-            $x_custom_models = $models->x_custom_model
-            $x_custom_models->fields_get(
-                [],
-                [],
-                ['attributes' => ['string', 'help', 'type']]
-            )
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.rb
+            :language: ruby
+            :start-after: <a id=ir.model>
+            :end-before: </a>
 
-      .. code-tab:: ruby
+      .. group-tab:: PHP
 
-            ir_models = models.proxy('ir.model')
-            x_custom_model_id = ir_models.create(
-                [],
-                [{
-                    name: "Custom Model",
-                    model: 'x_custom_model',
-                    state: 'manual'
-                }]
-            ).first
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.rb
+            :language: ruby
+            :start-after: <a id=ir.model>
+            :end-before: </a>
 
-            x_custom_models = models.proxy('x_custom_model')
-            x_custom_models.fields_get(
-                [],
-                [],
-                {attributes: %w(string help type)}
-            )
+      .. group-tab:: Java
 
-      .. code-tab:: java
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.java
+            :language: java
+            :dedent: 8
+            :start-after: <a id=ir.model>
+            :end-before: </a>
 
-            final Integer xCustomModelId = (Integer)models.execute(
-                "ir.model.create", asList(
-                    0,
-                    asList(new HashMap<String, Object>() {{
-                        put("name", "Custom Model");
-                        put("model", "x_custom_model");
-                        put("state", "manual");
-                    }})
-                )
-            )[0]
+      .. group-tab:: cURL
 
-            final Object fields = models.execute(
-                "x_custom_model.fields_get", asList(
-                    0,
-                    emptyList(),
-                    new HashMap<String, Object> () {{
-                        put("attributes", asList(
-                                "string",
-                                "help",
-                                "type"));
-                    }}
-                )
-            )
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.sh
+            :language: bash
+            :start-after: <a id=ir.model>
+            :end-before: </a>
 
    Result:
 
@@ -1266,102 +1180,55 @@ custom fields without using Python code.
 
 .. example::
 
+   Because we need a model on which to add a custom field, we are going to use
+   the model we created in the :ref:`external_api/ir.model` section.
+
    .. tabs::
 
-      .. code-tab:: python
+      .. group-tab:: Python XML-RPC
 
-            # Add a new field "x_foo" on "x_custom_model"
-            fields = models.ir.model.fields
-            fields.create(
-                [],
-                [{
-                    'model_id': x_custom_model_id,  # from the above example
-                    'name': 'x_foo',
-                    'ttype': 'char',
-                    'state': 'manual',
-                }]
-            )
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_xmlrpc2.py
+            :language: python
+            :dedent: 8
+            :start-after: <a id=ir.model.fields>
+            :end-before: </a>
 
-            # Create a new record and read it
-            x_custom_models = models.x_custom_model
-            [id] = x_custom_models.create(
-                [],
-                [{
-                    'x_foo': "test record"
-                }]
-            )
-            x_custom_models.read([id])
+      .. group-tab:: Python XML-RPC
 
-      .. code-tab:: php
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_jsonrpc2.py
+            :language: python
+            :dedent: 8
+            :start-after: <a id=ir.model.fields>
+            :end-before: </a>
 
-            // Add a new field "x_foo" on "x_custom_model"
-            $fields = models->ir->model->fields
-            $fields->create(
-                [],
-                [[
-                    'model_id' => $x_custom_model_id,  // above example
-                    'name' => 'x_foo',
-                    'ttype' => 'char',
-                    'state' => 'manual',
-                ]]
-            )
+      .. group-tab:: Ruby
 
-            // Create a new record and read it
-            $x_custom_models = $models->x_custom_model
-            $id = $x_custom_model->create(
-                [],
-                [[
-                    'x_foo' => "test record"
-                ]]
-            )[0]
-            $x_custom_model->read([$id])
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.rb
+            :language: ruby
+            :start-after: <a id=ir.model.fields>
+            :end-before: </a>
 
-      .. code-tab:: ruby
+      .. group-tab:: PHP
 
-            # Add a new field "x_foo" on "x_custom_model"
-            fields = models.proxy('ir.model.fields')
-            fields.create(
-                [],
-                [[
-                    model_id: x_custom_model_id,  # from the above example
-                    name: "x_foo",
-                    ttype: "char",
-                    state: "manual",
-                ]]
-            )
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.rb
+            :language: ruby
+            :start-after: <a id=ir.model.fields>
+            :end-before: </a>
 
-            # Create a new record and read it
-            x_custom_models = models.proxy('x_custom_model')
-            id = x_custom_models.create(
-                [],
-                [{
-                    x_foo: "test record"
-                }]
-            ).first
-            x_custom_models.read([id])
+      .. group-tab:: Java
 
-      .. code-tab:: java
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.java
+            :language: java
+            :dedent: 8
+            :start-after: <a id=ir.model.fields>
+            :end-before: </a>
 
-            // Add a new field "x_foo" on "x_custom_model"
-            models.execute("ir.model.fields.create", asList(
-                0,
-                asList(,new HashMap<String, Object>() {{
-                    put("model_id", xCustomModelId);
-                    put("name", "x_foo");
-                    put("ttype", "char");
-                    put("state", "manual");
-                }})
-            ));
+      .. group-tab:: cURL
 
-            // Create a new record and read it
-            final Integer id = (Integer)models.execute(
-                "x_custom_model.create", asList(
-                    0,
-                    asList(new HashMap<String, Object>() {{
-                        put("x_foo", "test record");
-                    }})
-                )
-            )[0];
+         .. literalinclude:: {ODOO_RELPATH}/odoo/addons/rpc2/tests/test_rpc2.sh
+            :language: bash
+            :start-after: <a id=ir.model.fields>
+            :end-before: </a>
 
    Result:
 
