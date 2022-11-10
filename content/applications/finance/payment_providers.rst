@@ -307,7 +307,7 @@ Configuration tab
 ~~~~~~~~~~~~~~~~~
 
 You can change the payment provider's front-end appearance by modifying its name under the
-**Displayed as** field and which credit card icons to display under the **Supported Payment Icons**
+**Displayed as** field and which credit card icons to display under the **Supported Payment Methods**
 field.
 
 .. _payment_providers/countries:
